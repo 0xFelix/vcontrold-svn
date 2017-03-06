@@ -1,0 +1,235 @@
+<vito>
+    <devices>
+        <device ID="20C8" name="VPlusHO1" protocol="P300"/>
+    </devices>
+    <commands>
+        <command name='getTempAussen' protocmd='getaddr'>
+            <addr>5525</addr>
+            <len>2</len>
+            <unit>UT</unit>
+            <description>Aussentemperatur</description>
+        </command>
+        <command name='getTempWarmwasser' protocmd='getaddr'>
+            <addr>0812</addr>
+            <len>2</len>
+            <unit>UT</unit>
+            <description>Warmwassertemperatur</description>
+        </command>
+        <command name='getTempWarmwasserSoll' protocmd='getaddr'>
+            <addr>6300</addr>
+            <len>1</len>
+            <unit>UTI</unit>
+            <description>Warmwassersolltemperatur</description>
+        </command>
+        <command name='getTempKessel' protocmd='getaddr'>
+            <addr>0810</addr>
+            <len>2</len>
+            <unit>UT</unit>
+            <description>Kesseltemperatur</description>
+        </command>
+        <command name='getTempKesselSoll' protocmd='getaddr'>
+            <addr>555A</addr>
+            <len>2</len>
+            <unit>UT</unit>
+            <description>Kesselsolltemperatur</description>
+        </command>
+        <command name='getBrennerStatus' protocmd='getaddr'>
+            <addr>55D3</addr>
+            <len>1</len>
+            <unit>RT</unit>
+            <description>Brennerstatus</description>
+        </command>
+        <command name='getBrennerLeistung' protocmd='getaddr'>
+            <addr>A38F</addr>
+            <len>1</len>
+            <unit>UKW1</unit>
+            <description>Brennerleistung</description>
+        </command>
+        <command name='getBrennerStarts' protocmd='getaddr'>
+            <addr>088A</addr>
+            <len>2</len>
+            <unit>CO</unit>
+            <description>Brennerstarts</description>
+        </command>
+        <command name='getOelverbrauch' protocmd='getaddr'>
+            <addr>7574</addr>
+            <len>4</len>
+            <unit>COL</unit>
+            <description>Brennerstarts</description>
+        </command>
+        <command name='getSpeicherladepumpeStatus' protocmd='getaddr'>
+            <addr>6513</addr>
+            <len>1</len>
+            <unit>ST</unit>
+            <description>Speicherladepumpestatus</description>
+        </command>
+        <command name='getHeizkreispumpeStatus' protocmd='getaddr'>
+            <addr>2906</addr>
+            <len>1</len>
+            <unit>ST</unit>
+            <description>Heizkreispumpenstatus</description>
+        </command>
+        <command name='getHeizkreispumpeDrehzahl' protocmd='getaddr'>
+            <addr>7663</addr>
+            <len>1</len>
+            <unit>PR1</unit>
+            <description>Heizkreispumpendrehzahl</description>
+        </command>
+        <command name='getBetriebsart' protocmd='getaddr'>
+            <addr>2323</addr>
+            <len>1</len>
+            <unit>BA</unit>
+            <description>Betriebsart</description>
+        </command>
+        <command name='getPartyModusStatus' protocmd='getaddr'>
+            <addr>2303</addr>
+            <len>1</len>
+            <unit>ST</unit>
+            <description>Partymodus</description>
+        </command>
+        <command name='getSparBetriebStatus' protocmd='getaddr'>
+            <addr>2302</addr>
+            <len>1</len>
+            <unit>ST</unit>
+            <description>Sparbetrieb</description>
+        </command>
+        <command name='getBrennerStundenStufe1' protocmd='getaddr'>
+            <addr>08A7</addr>
+            <len>4</len>
+            <unit>CS</unit>
+            <description>Brennerstunden Stufe 1</description>
+        </command>
+        <command name='getBrennerStundenStufe2' protocmd='getaddr'>
+            <addr>08AB</addr>
+            <len>4</len>
+            <unit>CS</unit>
+            <description>Brennerstunden Stufe 2</description>
+        </command>
+        <command name='getTempRaumSoll' protocmd='getaddr'>
+            <addr>2306</addr>
+            <len>1</len>
+            <unit>UTI</unit>
+            <description>Raumsolltemperatur</description>
+        </command>
+        <command name='getSystemZeit' protocmd='getaddr'>
+            <addr>088E</addr>
+            <len>8</len>
+            <unit>TI</unit>
+            <description>Systemzeit</description>
+        </command>
+        <command name='getUrlaubBeginn' protocmd='getaddr'>
+            <addr>2309</addr>
+            <len>8</len>
+            <unit>TI</unit>
+            <description>Urlaubsbeginn</description>
+        </command>
+        <command name='getUrlaubEnde' protocmd='getaddr'>
+            <addr>2311</addr>
+            <len>8</len>
+            <unit>TI</unit>
+            <description>Urlaubsende</description>
+        </command>
+        <command name='getUrlaubBetriebStatus' protocmd='getaddr'>
+            <addr>2535</addr>
+            <len>1</len>
+            <unit>ST</unit>
+            <description>Urlaubsbetrieb</description>
+        </command>
+        <command name='getNeigung' protocmd='getaddr'>
+            <addr>27D3</addr>
+            <len>1</len>
+            <unit>UN</unit>
+            <description>Neigung</description>
+        </command>
+        <command name='getNiveau' protocmd='getaddr'>
+            <addr>27D4</addr>
+            <len>1</len>
+            <unit>US</unit>
+            <description>Niveau</description>
+        </command>
+        <command name='getTempAbgas' protocmd='getaddr'>
+            <addr>0808</addr>
+            <len>2</len>
+            <unit>UT</unit>
+            <description>Abgastemperatur</description>
+        </command>
+        <command name='getUmschaltventilStatus' protocmd='getaddr'>
+            <addr>0A10</addr>
+            <len>1</len>
+            <unit>USV</unit>
+            <description>Umschaltventilstatus</description>
+        </command>
+        <command name='getError0' protocmd='getaddr'>
+            <addr>7507</addr>
+            <len>9</len>
+            <unit>ES</unit>
+            <description>Fehlerhistory Eintrag 1</description>
+        </command>
+        <command name='getError1' protocmd='getaddr'>
+            <addr>7510</addr>
+            <len>9</len>
+            <unit>ES</unit>
+            <description>Fehlerhistory Eintrag 2</description>
+        </command>
+        <command name='getError2' protocmd='getaddr'>
+            <addr>7519</addr>
+            <len>9</len>
+            <unit>ES</unit>
+            <description>Fehlerhistory Eintrag 3</description>
+        </command>
+        <command name='getError3' protocmd='getaddr'>
+            <addr>7522</addr>
+            <len>9</len>
+            <unit>ES</unit>
+            <description>Fehlerhistory Eintrag 4</description>
+        </command>
+        <command name='getError4' protocmd='getaddr'>
+            <addr>752B</addr>
+            <len>9</len>
+            <unit>ES</unit>
+            <description>Fehlerhistory Eintrag 5</description>
+        </command>
+        <command name='getError5' protocmd='getaddr'>
+            <addr>7534</addr>
+            <len>9</len>
+            <unit>ES</unit>
+            <description>Fehlerhistory Eintrag 6</description>
+        </command>
+        <command name='getError6' protocmd='getaddr'>
+            <addr>753D</addr>
+            <len>9</len>
+            <unit>ES</unit>
+            <description>Fehlerhistory Eintrag 7</description>
+        </command>
+        <command name='getError7' protocmd='getaddr'>
+            <addr>7546</addr>
+            <len>9</len>
+            <unit>ES</unit>
+            <description>Fehlerhistory Eintrag 8</description>
+        </command>
+        <command name='getError8' protocmd='getaddr'>
+            <addr>754F</addr>
+            <len>9</len>
+            <unit>ES</unit>
+            <description>Fehlerhistory Eintrag 9</description>
+        </command>
+        <command name='getError9' protocmd='getaddr'>
+            <addr>7558</addr>
+            <len>9</len>
+            <unit>ES</unit>
+            <description>Fehlerhistory Eintrag 10</description>
+        </command>
+        <command name='getTempVorlauf' protocmd='getaddr'>
+            <addr>0810</addr>
+            <len>2</len>
+            <unit>UT</unit>
+            <description>Vorlauftemperatur</description>
+        </command>
+        <command name='getTempVorlaufSoll' protocmd='getaddr'>
+            <addr>2544</addr>
+            <len>1</len>
+            <unit>UTI</unit>
+            <description>Vorlaufsolltemperatur</description>
+        </command>
+    </commands>
+</vito>

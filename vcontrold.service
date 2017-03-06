@@ -1,0 +1,10 @@
+[Unit]
+Description=vcontrold
+After=network.target
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/vcontrold
+
+[Install]
+WantedBy=multi-user.target
