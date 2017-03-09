@@ -60,11 +60,29 @@
             <type>uchar</type>
             <entity>Grad Celsius</entity>
         </unit>
-        <unit name='Leistung 1Byte unsigned'>
-            <abbrev>UKW1</abbrev>
-            <calc get='V/2' set='V*2'/>
+        <unit name='Leistung Grob 1Byte unsigned'>
+            <abbrev>UKW1HALF</abbrev>
+            <calc get='B0/2' set='B0*2'/>
             <type>uchar</type>
-            <entity>Kilowatt</entity>
+            <entity>%</entity>
+        </unit>
+        <unit name='Leistung Fein 1Byte unsigned'>
+            <abbrev>UKW1</abbrev>
+            <calc get='V' set='V'/>
+            <type>uchar</type>
+            <entity>%</entity>
+        </unit>
+        <unit name='Brennerstatus 2. Byte 1Byte unsigned'>
+            <abbrev>BST2B</abbrev>
+            <calc get='B1' set='B1'/>
+	    <type>uchar</type>
+	    <entity></entity>
+        </unit>
+        <unit name='Brennerstoerung 1Byte unsigned'>
+            <abbrev>BSTOER</abbrev>
+            <calc get='V' set='V'/>
+	    <type>uchar</type>
+	    <entity></entity>
         </unit>
         <unit name='Status'>
             <abbrev>ST</abbrev>

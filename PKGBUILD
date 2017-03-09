@@ -2,7 +2,7 @@
 
 pkgname=vcontrold-svn
 pkgver=r107
-pkgrel=1
+pkgrel=2
 pkgdesc='Linux Daemon für Vito Kommunikation'
 url='https://sourceforge.net/projects/vcontrold'
 arch=(i686 x86_64 armv6h armv7h)
@@ -16,8 +16,8 @@ source=("${pkgname}::svn+https://svn.code.sf.net/p/vcontrold/code/trunk"
         'vito.xml')
 sha256sums=('SKIP'
             '1573c77833ceb552b4a2226f2ae712798e62f3e8c96e3de8c7572fbea0ee0b81'
-	    'af594d161ea645a568520e39d9da63d2ba02dcdb389ae2c85f0ef57ec7bdb475'
-	    '65650ec909e131d8796f56be7e3a9412af7e117e357d7b117b1deb2eb88415cb')
+	    'bd2da6533147e0011ba0acdde8b45f84c8127f2bac31efdf0d2d9cfcfc0445bc'
+	    '1606d8ee4a105cde725a59d9b38d910fca91b282e7ae257cf10adabc0c2bb0a7')
 
 pkgver() {
   cd "${pkgname}/vcontrold"

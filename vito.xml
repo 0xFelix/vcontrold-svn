@@ -33,17 +33,29 @@
             <unit>UT</unit>
             <description>Kesselsolltemperatur</description>
         </command>
-        <command name='getBrennerStatus' protocmd='getaddr'>
+        <command name='getBrennerLeistungFein' protocmd='getaddr'>
             <addr>55D3</addr>
             <len>1</len>
-            <unit>RT</unit>
-            <description>Brennerstatus</description>
-        </command>
-        <command name='getBrennerLeistung' protocmd='getaddr'>
-            <addr>A38F</addr>
-            <len>1</len>
             <unit>UKW1</unit>
-            <description>Brennerleistung</description>
+            <description>Brennerleistung Fein</description>
+        </command>
+        <command name='getBrennerLeistungGrob' protocmd='getaddr'>
+            <addr>A38F</addr>
+	    <len>2</len>
+            <unit>UKW1HALF</unit>
+            <description>Brennerleistung Grob</description>
+        </command>
+        <command name='getBrennerStatus' protocmd='getaddr'>
+            <addr>A38F</addr>
+	    <len>2</len>
+            <unit>BST2B</unit>
+	    <description>Brennerstatus</description>
+        </command>
+        <command name='getBrennerStoerung' protocmd='getaddr'>
+            <addr>0883</addr>
+	    <len>1</len>
+            <unit>BSTOER</unit>
+	    <description>Brennerstoerung</description>
         </command>
         <command name='getBrennerStarts' protocmd='getaddr'>
             <addr>088A</addr>
