@@ -10,6 +10,7 @@ license=(GPL)
 backup=(etc/vcontrold/vcontrold.xml etc/vcontrold/vito.xml)
 depends=(libxml2)
 makedepends=(subversion)
+provides=(vcontrold)
 source=("${pkgname}::svn+https://svn.code.sf.net/p/vcontrold/code/trunk"
         'vcontrold.service'
         'vcontrold.xml'
