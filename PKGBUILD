@@ -2,7 +2,7 @@
 
 pkgname=vcontrold-svn
 pkgver=r107
-pkgrel=2
+pkgrel=3
 pkgdesc='Linux Daemon für Vito Kommunikation'
 url='https://sourceforge.net/projects/vcontrold'
 arch=(i686 x86_64 armv6h armv7h)
