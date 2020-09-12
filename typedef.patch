@@ -1,0 +1,128 @@
+Index: client.h
+===================================================================
+--- client.h	(revision 107)
++++ client.h	(working copy)
+@@ -11,6 +11,7 @@
+ 
+ 
+ typedef struct txRx *trPtr;
++typedef struct txRx TxRx;
+ 
+ ssize_t recvSync(int fd,char *wait,char **recv);
+ int connectServer(char *host, int port);
+@@ -27,5 +28,5 @@
+ 	char *raw;
+ 	time_t timestamp;
+ 	trPtr next;
+-} TxRx;
++};
+ 
+Index: xmlconfig.h
+===================================================================
+--- xmlconfig.h	(revision 107)
++++ xmlconfig.h	(working copy)
+@@ -15,6 +15,16 @@
+ typedef struct allow *allowPtr;
+ typedef struct enumerate *enumPtr;
+ 
++typedef struct config Config;
++typedef struct protocol Protocol;
++typedef struct unit Unit;
++typedef struct macro Macro;
++typedef struct command Command;
++typedef struct compile Compile;
++typedef struct device Device;
++typedef struct icmd iCmd;
++typedef struct allow Allow;
++typedef struct enumerate Enumerate;
+ 
+ int parseXMLFile(char *filename);
+ macroPtr getMacroNode(macroPtr ptr,const char *name);
+@@ -30,7 +40,7 @@
+ 	in_addr_t ip;
+ 	in_addr_t mask;
+ 	allowPtr next;
+-} Allow;
++};
+ 
+ struct compile {
+         int token;
+@@ -39,7 +49,7 @@
+         unitPtr uPtr;
+ 	char *errStr;
+         compilePtr next;
+-} Compile;
++};
+ 
+ 
+ 
+@@ -52,7 +62,7 @@
+ 	allowPtr aPtr;
+ 	int syslog;
+ 	int debug;
+-} Config;
++};
+ 
+ struct protocol {
+ 	char *name;
+@@ -60,7 +70,7 @@
+ 	macroPtr mPtr;
+ 	icmdPtr icPtr;
+ 	protocolPtr next;
+-} Protocol; 
++};
+ 
+ struct device {
+ 	char *name;
+@@ -68,7 +78,7 @@
+ 	commandPtr cmdPtr;
+ 	protocolPtr protoPtr;
+ 	devicePtr next;
+-} Device;
++};
+ 
+ struct unit {
+ 	char *name;
+@@ -81,13 +91,13 @@
+ 	char *type;
+ 	enumPtr ePtr;
+ 	unitPtr next;
+-} Unit;
++};
+ 
+ struct macro {
+ 	char *name;
+ 	char *command;
+ 	macroPtr next;
+-} Macro;
++};
+ 	
+ struct command {
+ 	char *name;
+@@ -105,7 +115,7 @@
+ 	compilePtr cmpPtr;
+ 	char *description;
+ 	commandPtr next;
+-} Command;
++};
+ 	
+ struct icmd {
+ 	char *name;
+@@ -113,7 +123,7 @@
+ 	unsigned char retry;
+ 	unsigned short recvTimeout;
+ 	icmdPtr next;
+-} iCmd;
++};
+ 
+ struct enumerate {
+ 	char *bytes;
+@@ -120,7 +130,7 @@
+ 	int len;
+ 	char *text;
+ 	enumPtr next;
+-} Enumerate;
++};
+ 	
+ 	
+ 	
